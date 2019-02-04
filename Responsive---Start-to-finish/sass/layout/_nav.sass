@@ -1,0 +1,111 @@
+
+
+.main-nav
+	background: linear-gradient(to right, $accent-main,$accent-secondary)
+	position: absolute
+	top: 0
+	left: 100%
+	right: 0
+	font-size: 1.2rem
+
+	overflow: hidden
+
+	transition: all ease-in-out 350ms
+
+	@media(min-width: 725px)
+		position: relative
+		flex: auto
+		background: none
+		margin-top: 1.2em
+		margin-left: 2em
+		left: 0
+	
+	ul
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		height: 100vh
+
+		@media(min-width: 725px)
+			flex-direction: row
+			height: auto
+
+
+	li 
+		background: linear-gradient(to right, $accent-main,$accent-secondary)
+		flex: 1 1 auto
+		border-bottom: 1px solid rgba(0, 0, 0, .25)
+		display: flex	
+
+		@media(min-width: 725px)
+			display: inline-block
+			border: none
+			text-align: right
+			background: none
+
+
+		
+
+	a
+		color: $text-inverse
+		text-decoration: none
+		flex-basis: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		
+		@media(min-width: 725px)
+			justify-content: flex-end
+			display: inline
+
+		&:hover,
+		&:focus
+			background: rgba(0, 0, 0, .10)
+			@media(min-width: 725px)
+				background: none
+				color: lighten($text-secondary,35%)
+
+	&.is-open
+		left: 0
+
+
+
+// Hanburger Menu - Mobile
+
+.nav-toggle
+	padding: 2em
+	position: absolute
+	top: 1em
+	right: 0
+	cursor: pointer
+
+	@media(min-width: 725px)
+		display: none
+
+.hamburger, .hamburger::before, .hamburger::after
+	content : ''
+	display: block
+	width: 2em
+	height: 3px
+	background: white
+	transition: all ease-in-out 300ms
+
+.hamburger::before
+	transform: translateY(-6px)
+
+.hamburger::after
+	transform: translateY(3px)
+
+
+.hamburger.is-open
+	transform: rotate(45deg)
+
+	&::after
+		transform: rotate(-90deg) translateX(3px)
+
+	&::before
+		opacity: 0
+
+
+
+

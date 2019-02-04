@@ -1,0 +1,43 @@
+.cta
+	background-color: $main
+	
+	background-image: url(../img/call-to-action-new.jpg)
+	
+	background-size: cover
+	
+	background-position: center
+	padding: 5em 0
+	background-blend-mode: overlay
+	color: $text-inverse
+	position: relative
+	overflow: hidden
+
+
+	@media(min-width: 725px)
+		padding: 10em 0
+
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			border: 1em solid $white
+
+
+		&::before
+			background: linear-gradient(to bottom, $accent-main,$accent-secondary)
+			top: 0
+			bottom: -1em
+			transform: skewX(60deg)
+			left: -105%
+		
+		&::after
+			background: linear-gradient(to top, $accent-main,$accent-secondary)
+			top: -1em
+			bottom: 0
+			transform: skewX(60deg)
+			right: -105%
+
+.container--cta
+	@media(min-width: 725px)
+		width: 50%

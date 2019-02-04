@@ -1,0 +1,32 @@
+.btn
+	display: inline-block
+	padding: .75em 1.5em
+	
+	text-transform: uppercase
+	text-decoration: none
+
+	&:not(:last-of-type)
+		margin-bottom: 0.6em
+
+
+.btn--primary
+	background: linear-gradient(to right, $accent-main,$accent-secondary)
+	color: $text-inverse
+	border: 2px solid $accent-secondary
+
+	&:hover,
+	&:focus
+		background: darken($accent-secondary, 15%)
+		border-color: darken($accent-secondary, 15%)
+
+.btn--secondary
+	border: 2px solid $text-inverse
+	color: $text-inverse
+
+	&:hover,
+	&:focus
+		background: $text-inverse
+		color: $text-main
+	
+
+
